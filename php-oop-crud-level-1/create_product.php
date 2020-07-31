@@ -31,7 +31,7 @@ echo "<div class='right-button-margin'>
         $product->description = $_POST['description'];
         $product->category_id = $_POST['category_id'];
         $image=!empty($_FILES["image"]["name"])
-        ? sha1_file($_FILES['image']['tmp_name']) . "-" . basename($_FILES["image"]["name"]) : "";
+                ? sha1_file($_FILES['image']['tmp_name']) . "-" . basename($_FILES["image"]["name"]) : "";
         $product->image = $image;
     
         // create the product
